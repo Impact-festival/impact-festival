@@ -7,8 +7,9 @@ røde logotype, Figtree/Climate Crisis, luftige hero og praktiske footer.
 Fire nummererede indgange ligger efter hero og før program/billedindhold.
 Trifolium-siden forklarer stedet, virksomhederne, faciliteterne og festivalens
 forbindelse til arbejdsfællesskabet. Samme layout, typografi og komponenter anvendes.
-MMD-kodestilen er anvendt med semantisk HTML, almindelig CSS og Astro-komponenter;
-ingen klientframeworks eller ekstra JavaScript er nødvendige for navigationen.
+MMD-kodestilen er anvendt med semantisk HTML, almindelig CSS og Astro-komponenter.
+Mobilmenuen bruger en lille JavaScript-forbedring oven på det native `dialog`-element,
+så menuen har fokusstyring, Escape-lukning og samme udtryk som Figma-prototypen.
 
 ## Filer
 
@@ -24,7 +25,7 @@ ingen klientframeworks eller ekstra JavaScript er nødvendige for navigationen.
 
 | Indgang | Destination |
 | --- | --- |
-| Talks & Workshops | `#talks-workshops`, med links til officielle talks/workshops |
+| Talks & Workshops | https://www.trifolium-impactfestival.com/fullprogram2026 |
 | Musik | https://www.trifolium-impactfestival.com/music-2026 |
 | Location | `#location`, adresse, kontakt og kortlink |
 | Hvad er Trifolium? | `/trifolium/` |
@@ -58,13 +59,21 @@ Der er ingen nye fotos/videoer af Trifolium eller opdigtede billedpladsholdere.
 
 - `ASTRO_TELEMETRY_DISABLED=1 npm run build`: bestået, to statiske sider.
 - `git diff --check`: bestået.
-- Begge sider visuelt inspiceret i Chrome ved 390, 768 og 1440 px.
+- Begge sider inspiceret i Chromium ved 390, 768 og 1440 px.
 - Intet konstateret vandret overflow; mobilindgange fordeles i to kolonner.
 - Trifolium-indgang, tilbage-link og Location-anker afprøvet.
-- About-menu åbnet med Enter; link til Trifolium fra menu afprøvet.
+- Mobilmenuen er afprøvet med tastatur: MENU åbner dialogen, fokus flyttes til
+  CLOSE, Escape lukker, og fokus returneres til MENU. Desktopmenuernes native
+  `details`/`summary`-betjening er bevaret.
+- Kontrolleret: dansk `lang`, én `main`, header/footer/navigation-landmarks,
+  logisk H1/H2-struktur, skip-link, unikke id'er, synlige fokusmarkeringer,
+  meningsfulde linknavne og `alt` på alle billeder.
+- Impact-rød `#ca1f22` mod hvid er målt til ca. 5,63:1 og opfylder AA for normal tekst.
+- Selvstændige mobil-links har mindst 44 px trykhøjde; små links inde i løbende
+  kildetekst er bevaret som inline-links.
+- `noindex, nofollow` er kontrolleret i begge genererede sider.
 - Browserens opsamlede error-log var tom.
 - Ingen separat lint/typecheck er konfigureret i package.json; build er ikke en
-  erstatning for en fuld Astro-typecheck eller en komplet accessibility-audit.
-- Ingen commit, push eller Netlify-publicering foretaget i denne implementering.
+  erstatning for en certificeret WCAG-audit med flere skærmlæsere og brugertest.
 
 Lokalt: `ASTRO_TELEMETRY_DISABLED=1 npm run dev`, åbn http://localhost:4321/.

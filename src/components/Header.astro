@@ -3,9 +3,29 @@ import { official, tickets, aboutLinks, programmeLinks } from '../data/festival-
 ---
 <header class="site-header">
   <a class="brand" href="/" aria-label="Impact Festival — forsiden"><img src="/images/impact-logo.png" alt="Impact Festival" width="180" height="48" /></a>
-  <nav aria-label="Hovednavigation">
+  <nav class="desktop-nav" aria-label="Hovednavigation">
     <details name="main-menu"><summary>ABOUT</summary><div class="dropdown"><a href="/">Impact Festival</a><a href="/trifolium/" aria-current={Astro.url.pathname === '/trifolium/' ? 'page' : undefined}>Hvad er Trifolium?</a>{aboutLinks.map(([label, path]) => <a href={`${official}${path}`}>{label} ↗</a>)}</div></details>
     <details name="main-menu"><summary>PROGRAM</summary><div class="dropdown">{programmeLinks.map(([label, path]) => <a href={`${official}${path}`}>{label} ↗</a>)}</div></details>
     <a href={tickets}>TICKETS ↗</a><a href="https://mailchi.mp/trifo.dk/7xfgb6hb9e">NEWSLETTER ↗</a><a class="social-link" href="https://www.instagram.com/impactfestival_cph/" aria-label="Impact Festival på Instagram">IG ↗</a>
   </nav>
+  <button class="mobile-menu-button" type="button" aria-haspopup="dialog" aria-controls="mobile-menu-dialog">MENU</button>
+  <dialog class="mobile-menu-dialog" id="mobile-menu-dialog" aria-label="Mobilmenu">
+    <button class="mobile-menu-close" type="button">CLOSE</button>
+    <nav class="mobile-menu-panel" aria-label="Mobilnavigation">
+      <a href="/">ABOUT</a>
+      <a href={`${official}/fullprogram2026`}>PROGRAM ↗</a>
+      <a class="mobile-ticket-link" href={tickets}>TICKETS ↗</a>
+      <a href="https://mailchi.mp/trifo.dk/7xfgb6hb9e">NEWSLETTER ↗</a>
+      <a href="/trifolium/" aria-current={Astro.url.pathname === '/trifolium/' ? 'page' : undefined}>HVAD ER TRIFOLIUM?</a>
+    </nav>
+  </dialog>
 </header>
+
+<script>
+  const menuButton = document.querySelector<HTMLButtonElement>('.mobile-menu-button');
+  const menuDialog = document.querySelector<HTMLDialogElement>('.mobile-menu-dialog');
+  const closeButton = menuDialog?.querySelector<HTMLButtonElement>('.mobile-menu-close');
+
+  menuButton?.addEventListener('click', () => menuDialog?.showModal());
+  closeButton?.addEventListener('click', () => menuDialog?.close());
+</script>
