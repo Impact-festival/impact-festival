@@ -1,0 +1,6 @@
+---
+import { entries } from '../data/festival-content';
+---
+<nav class="entry-points" aria-label="Udforsk festivalen">
+  {entries.map(entry => <a href={entry.href}>{entry.label}</a>)}
+</nav>

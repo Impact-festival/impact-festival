@@ -1,0 +1,12 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+interface Props { title: string; description: string }
+const { title, description } = Astro.props;
+---
+<!doctype html>
+<html lang="da"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content={description} /><title>{title}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head><body><a class="skip-link" href="#main">Gå til indhold</a><Header /><main id="main"><slot /></main><Footer /></body></html>

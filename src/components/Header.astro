@@ -1,0 +1,11 @@
+---
+import { official, tickets, aboutLinks, programmeLinks } from '../data/festival-content';
+---
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Impact Festival — forsiden"><img src="/images/impact-logo.png" alt="Impact Festival" width="180" height="48" /></a>
+  <nav aria-label="Hovednavigation">
+    <details name="main-menu"><summary>ABOUT</summary><div class="dropdown"><a href="/">Impact Festival</a><a href="/trifolium/" aria-current={Astro.url.pathname === '/trifolium/' ? 'page' : undefined}>Hvad er Trifolium?</a>{aboutLinks.map(([label, path]) => <a href={`${official}${path}`}>{label} ↗</a>)}</div></details>
+    <details name="main-menu"><summary>PROGRAM</summary><div class="dropdown">{programmeLinks.map(([label, path]) => <a href={`${official}${path}`}>{label} ↗</a>)}</div></details>
+    <a href={tickets}>TICKETS ↗</a><a href="https://mailchi.mp/trifo.dk/7xfgb6hb9e">NEWSLETTER ↗</a><a class="social-link" href="https://www.instagram.com/impactfestival_cph/" aria-label="Impact Festival på Instagram">IG ↗</a>
+  </nav>
+</header>

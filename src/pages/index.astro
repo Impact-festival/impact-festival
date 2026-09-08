@@ -1,19 +1,22 @@
 ---
-const pageTitle = "Impact Festival";
+import Layout from '../layouts/Layout.astro';
+import EntryPoints from '../components/EntryPoints.astro';
+import { tickets, updates } from '../data/festival-content';
 ---
 
-<!doctype html>
-<html lang="da">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <main>
-      <h1>{pageTitle}</h1>
-      <p>Astro-projektet er klar til at blive bygget videre på.</p>
-    </main>
-  </body>
-</html>
+<Layout title="Impact Festival · 11–12 september 2026" description="Impact Festival på Trifolium i Sydhavnen. Find musik, talks, workshops og praktisk information.">
+  <section class="hero page-width" aria-labelledby="festival-title">
+    <h1 id="festival-title"><img src="/images/impact-2026.png" alt="Impact Festival — Trifolium — 11–12 september 2026" width="1500" height="450" fetchpriority="high" /></h1>
+    <p class="hero-intro">MUSIC // ART // TALKS // WORKSHOPS // FOOD<br />DESIGNED TO INCREASE OUR IMPACT</p><a class="ticket-link" href={tickets}>TICKETS ↗</a>
+  </section>
+  <section id="talks-workshops" class="festival-feed page-width" aria-label="Festivalindhold">
+    <EntryPoints />
+    <div class="image-grid">
+      {updates.map(([title, asset, post]) => (
+        <a href={`https://www.instagram.com/p/${post}/`}>
+          <img src={`https://images.squarespace-cdn.com/content/v1/68305df4506cf643363757d3/${asset}/image-asset.jpeg?format=750w`} alt={title} width="750" height="750" loading="lazy" />
+        </a>
+      ))}
+    </div>
+  </section>
+</Layout>
