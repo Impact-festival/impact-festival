@@ -1,4 +1,4 @@
-:root { --red: #d90916; --display: 'Climate Crisis', 'Arial Black', sans-serif; }
+:root { --red: #ca1f22; --display: 'Climate Crisis', 'Arial Black', sans-serif; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
 body { margin: 0; background: white; color: #080808; font-family: 'Figtree', Arial, sans-serif; font-size: 17px; line-height: 1.55; }
