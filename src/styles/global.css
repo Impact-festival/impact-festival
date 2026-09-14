@@ -46,12 +46,27 @@ summary::-webkit-details-marker { display: none; }
 .image-grid a { text-decoration: none; }
 .image-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; }
 .image-grid span { display: block; padding-block: 12px; font-size: 13px; font-weight: 700; }
-.site-footer { display: grid; grid-template-columns: 1fr 1fr; gap: 10%; padding-block: 110px 70px; }
-.footer-logo { align-self: center; max-width: 360px; }
-.footer-info { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
-.footer-info h2 { font-size: clamp(20px, 2vw, 28px); }
-.footer-info > div > a, address a { display: inline-block; padding-block: 10px; }
-.legal { grid-column: 1 / -1; font-size: 15px; }
+.site-footer { width: 100%; background: var(--red); color: #080808; }
+.footer-inner { width: min(92%, 1500px); margin-inline: auto; padding-block: clamp(54px, 7vw, 105px) 38px; }
+.footer-shout { max-width: 12ch; margin-bottom: clamp(36px, 5vw, 70px); font-family: var(--display); font-size: clamp(54px, 9.8vw, 150px); font-weight: 400; line-height: .87; letter-spacing: -.035em; text-transform: uppercase; }
+.footer-main { display: grid; grid-template-columns: 1.25fr .75fr .75fr .8fr; border-block: 3px solid #080808; }
+.footer-main > * { min-width: 0; margin: 0; padding: clamp(28px, 3vw, 48px) clamp(20px, 2.5vw, 38px); }
+.footer-main > *:first-child { padding-left: 0; }
+.footer-main > * + * { border-left: 2px solid #080808; }
+.footer-date { font-family: var(--display); font-size: clamp(32px, 4.4vw, 68px); font-weight: 400; line-height: .98; }
+.footer-detail h2 { margin-bottom: 18px; font-family: inherit; font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.footer-detail address { margin: 0; }
+.footer-detail a { overflow-wrap: anywhere; }
+.footer-actions { display: flex; flex-direction: column; justify-content: center; gap: 12px; padding-right: 0; }
+.footer-action { display: block; padding: 15px 18px; border: 2px solid #080808; font-size: 13px; font-weight: 800; letter-spacing: .06em; text-align: center; text-decoration: none; text-transform: uppercase; transition: background-color .15s ease, color .15s ease; }
+.footer-map { background: #080808; color: white; }
+.footer-ticket { background: white; color: #080808; }
+.footer-action:hover { background: var(--red); color: #080808; }
+.site-footer a:focus-visible { outline-color: white; }
+.footer-bottom { display: grid; grid-template-columns: minmax(190px, 320px) minmax(0, 1fr); align-items: end; gap: clamp(35px, 8vw, 140px); padding-top: 34px; }
+.footer-logo { display: block; width: 100%; }
+.footer-logo img { mix-blend-mode: multiply; }
+.legal { max-width: 74ch; margin: 0; font-size: 13px; line-height: 1.5; }
 .trifolium-hero { padding-block: 50px 100px; }
 .back-link { display: inline-block; margin-bottom: 70px; }
 .trifolium-hero h1 { font-family: var(--display); font-size: clamp(38px, 7vw, 105px); line-height: 1.12; color: var(--red); font-weight: 400; margin-bottom: 45px; }
@@ -66,6 +81,6 @@ summary::-webkit-details-marker { display: none; }
 .relationship a:focus-visible { outline-color: white; }
 address { font-style: normal; margin-bottom: 25px; }
 .source-note { padding-block: 35px; font-size: 13px; }
-@media(max-width: 1000px) { .site-header { flex-wrap: wrap; } .site-header nav { gap: 24px; } .entry-points { grid-template-columns: repeat(2, minmax(0, 1fr)); } .image-grid { grid-template-columns: 1fr 1fr; } .site-footer { gap: 5%; } }
-@media(max-width: 600px) { .site-header { padding: 18px 5%; gap: 15px; } .brand { flex-basis: 145px; } .site-header .desktop-nav { display: none; } .site-header .desktop-nav summary::after { content: none; } .mobile-menu-button { display: block; width: 72px; min-height: 44px; margin-left: auto; border: 0; border-radius: 0; background: #080808; color: white; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; } .mobile-menu-dialog { width: 100%; max-width: none; height: 100%; max-height: none; margin: 0; padding: 0; border: 0; background: #080808; color: white; } .mobile-menu-dialog[open] { display: block; } .mobile-menu-dialog::backdrop { background: #080808; } .mobile-menu-close { position: absolute; z-index: 2; top: 20px; right: 12px; width: 74px; height: 45px; border: 0; border-radius: 0; background: white; color: #080808; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; } .site-header .mobile-menu-panel { display: flex; flex-direction: column; align-items: flex-start; gap: 28px; width: 100%; height: 100%; padding: 140px 32px 40px; overflow-y: auto; background: #080808; color: white; font-size: clamp(26px, 9vw, 36px); font-weight: 700; line-height: 1.2; } .site-header .mobile-menu-panel > a { padding: 0; text-decoration: none; } .mobile-menu-panel .mobile-ticket-link, .mobile-menu-panel a[aria-current="page"] { color: var(--red); } .hero { padding-top: 70px; padding-bottom: 60px; } .hero h1 { margin-bottom: 30px; } .hero-intro { font-size: 13px; } .ticket-link { margin-top: 40px; } .content-section { grid-template-columns: 1fr; gap: 25px; padding-block: 60px; } .festival-feed { padding-block: 60px; } .image-grid { gap: 15px; } .site-footer { grid-template-columns: 1fr; gap: 50px; padding-block: 50px; } .footer-logo { max-width: 220px; } .footer-info { gap: 15px; } .trifolium-hero { padding-bottom: 50px; } .back-link { margin-bottom: 45px; } .intro-copy, .relationship p:not(.eyebrow) { font-size: 18px; } .relationship { padding-block: 60px; } }
+@media(max-width: 1000px) { .site-header { flex-wrap: wrap; } .site-header nav { gap: 24px; } .entry-points { grid-template-columns: repeat(2, minmax(0, 1fr)); } .image-grid { grid-template-columns: 1fr 1fr; } .footer-main { grid-template-columns: 1fr 1fr; } .footer-main > *:nth-child(3) { border-left: 0; } .footer-main > *:nth-child(n + 3) { border-top: 2px solid #080808; } .footer-main > *:first-child, .footer-main > *:nth-child(3) { padding-left: 0; } .footer-actions { padding-right: 0; } }
+@media(max-width: 600px) { .site-header { padding: 18px 5%; gap: 15px; } .brand { flex-basis: 145px; } .site-header .desktop-nav { display: none; } .site-header .desktop-nav summary::after { content: none; } .mobile-menu-button { display: block; width: 72px; min-height: 44px; margin-left: auto; border: 0; border-radius: 0; background: #080808; color: white; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; } .mobile-menu-dialog { width: 100%; max-width: none; height: 100%; max-height: none; margin: 0; padding: 0; border: 0; background: #080808; color: white; } .mobile-menu-dialog[open] { display: block; } .mobile-menu-dialog::backdrop { background: #080808; } .mobile-menu-close { position: absolute; z-index: 2; top: 20px; right: 12px; width: 74px; height: 45px; border: 0; border-radius: 0; background: white; color: #080808; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; } .site-header .mobile-menu-panel { display: flex; flex-direction: column; align-items: flex-start; gap: 28px; width: 100%; height: 100%; padding: 140px 32px 40px; overflow-y: auto; background: #080808; color: white; font-size: clamp(26px, 9vw, 36px); font-weight: 700; line-height: 1.2; } .site-header .mobile-menu-panel > a { padding: 0; text-decoration: none; } .mobile-menu-panel .mobile-ticket-link, .mobile-menu-panel a[aria-current="page"] { color: var(--red); } .hero { padding-top: 70px; padding-bottom: 60px; } .hero h1 { margin-bottom: 30px; } .hero-intro { font-size: 13px; } .ticket-link { margin-top: 40px; } .content-section { grid-template-columns: 1fr; gap: 25px; padding-block: 60px; } .festival-feed { padding-block: 60px; } .image-grid { gap: 15px; } .footer-inner { width: 90%; padding-block: 48px 30px; } .footer-shout { margin-bottom: 34px; font-size: clamp(48px, 16vw, 76px); } .footer-main { grid-template-columns: 1fr; } .footer-main > * { padding: 24px 0; border-left: 0 !important; } .footer-main > * + * { border-top: 2px solid #080808; } .footer-date { font-size: clamp(38px, 13vw, 58px); } .footer-detail h2 { margin-bottom: 12px; } .footer-actions { gap: 10px; } .footer-action { padding: 16px; } .footer-bottom { grid-template-columns: 1fr; gap: 28px; padding-top: 30px; } .footer-logo { max-width: 240px; } .trifolium-hero { padding-bottom: 50px; } .back-link { margin-bottom: 45px; } .intro-copy, .relationship p:not(.eyebrow) { font-size: 18px; } .relationship { padding-block: 60px; } }
 @media(prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .hero-video { display: none; } }

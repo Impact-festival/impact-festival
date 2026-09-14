@@ -1,7 +1,30 @@
 ---
 import { tickets } from '../data/festival-content';
 ---
-<footer id="location" class="site-footer page-width">
-<a class="footer-logo" href="/" aria-label="Til forsiden"><img src="/images/impact-logo.png" alt="Impact Festival" width="360" height="96" loading="lazy" /></a>
-<div class="footer-info"><div><h2>Location</h2><p>Bådehavnsgade 42<br />2450, København SV</p><a href="https://www.google.com/maps/search/?api=1&query=B%C3%A5dehavnsgade+42+2450+K%C3%B8benhavn+SV">Find vej ↗</a></div><div><h2>Contact</h2><a href="mailto:impact@trifo.dk">impact@trifo.dk</a></div><p class="legal">IMPACT FESTIVAL is organized by Forening Impact, Sydhavnen, CVR no. 46334272, Bådehavnsgade 42, 2450 Copenhagen SV. Tickets are sold through <a href={tickets}>billetsalg.dk</a>.</p></div>
+
+<footer id="location" class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-shout">Vi ses i Sydhavnen</p>
+    <div class="footer-main">
+      <p class="footer-date">11–12 SEP 2026</p>
+      <section class="footer-detail" aria-labelledby="footer-location-heading">
+        <h2 id="footer-location-heading">Location</h2>
+        <address>Bådehavnsgade 42<br />2450 København SV</address>
+      </section>
+      <section class="footer-detail" aria-labelledby="footer-contact-heading">
+        <h2 id="footer-contact-heading">Contact</h2>
+        <a href="mailto:impact@trifo.dk">impact@trifo.dk</a>
+      </section>
+      <div class="footer-actions">
+        <a class="footer-action footer-map" href="https://www.google.com/maps/search/?api=1&query=B%C3%A5dehavnsgade+42+2450+K%C3%B8benhavn+SV">Find vej ↗</a>
+        <a class="footer-action footer-ticket" href={tickets}>Køb billet ↗</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <a class="footer-logo" href="/" aria-label="Til forsiden">
+        <img src="/images/impact-logo.png" alt="Impact Festival" width="360" height="96" loading="lazy" />
+      </a>
+      <p class="legal">IMPACT FESTIVAL is organized by Forening Impact, Sydhavnen, CVR no. 46334272, Bådehavnsgade 42, 2450 Copenhagen SV. Tickets are sold through <a href={tickets}>billetsalg.dk</a>.</p>
+    </div>
+  </div>
 </footer>
