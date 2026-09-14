@@ -2,5 +2,5 @@
 import { entries } from '../data/festival-content';
 ---
 <nav class="entry-points" aria-label="Udforsk festivalen">
-  {entries.map(entry => <a href={entry.href}>{entry.label}</a>)}
+  {entries.map(entry => <a href={entry.href}><img src={entry.image} alt={entry.alt} width="1200" height="675" loading="lazy" /><span>{entry.label}</span></a>)}
 </nav>
