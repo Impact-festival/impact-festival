@@ -53,6 +53,7 @@ summary::-webkit-details-marker { display: none; }
 .trifolium-hero h1 { font-family: var(--display); font-size: clamp(38px, 7vw, 105px); line-height: 1.12; color: var(--red); font-weight: 400; margin-bottom: 45px; }
 .lead { font-size: clamp(25px, 3vw, 40px); font-weight: 700; line-height: 1.2; }
 .intro-copy { max-width: 650px; font-size: 21px; }
+.trifolium-hero-image { width: min(100%, 938px); margin-top: 55px; }
 .facility-list { padding: 0; list-style: none; margin-top: 0; }
 .facility-list li { border-bottom: 1px solid #aaa; padding-block: 12px; }
 .relationship { background: var(--red); color: white; padding-block: 90px; }
