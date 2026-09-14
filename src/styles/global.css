@@ -23,7 +23,7 @@ summary::-webkit-details-marker { display: none; }
 .desktop-nav details[open] summary::after { content: ' −'; }
 .dropdown { position: absolute; z-index: 3; top: 100%; right: 0; min-width: 235px; padding: 12px 20px; background: white; border: 2px solid black; }
 .dropdown a { display: block; padding-block: 10px; }
-.hero { position: relative; isolation: isolate; overflow: hidden; min-height: min(760px, 78vh); display: flex; flex-direction: column; justify-content: center; text-align: center; padding-top: clamp(70px, 7vw, 105px); padding-bottom: 100px; background: #080808 url('/images/hero-video-poster.jpg') center / cover no-repeat; }
+.hero { position: relative; isolation: isolate; overflow: hidden; width: 100%; margin-inline: 0; min-height: min(760px, 78vh); display: flex; flex-direction: column; justify-content: center; text-align: center; padding-top: clamp(70px, 7vw, 105px); padding-bottom: 100px; background: #080808 url('/images/hero-video-poster.jpg') center / cover no-repeat; }
 .hero::after { content: ''; position: absolute; z-index: -1; inset: 0; background: rgb(0 0 0 / 34%); }
 .hero-video { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .hero h1 { max-width: 1230px; margin: 0 auto; }
