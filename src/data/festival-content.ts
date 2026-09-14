@@ -6,7 +6,7 @@ export const entries = [
   { label: 'Talks & Workshops', href: `${official}/fullprogram2026`, image: '/images/cta/talks-workshops.jpg', alt: 'Skilt til en writing workshop på Impact Festival' },
   { label: 'Musik', href: `${official}/music-2026`, image: '/images/cta/music.jpg', alt: 'Koncert på Impact Festivals udendørsscene' },
   { label: 'Location', href: '#location', image: '/images/cta/location.jpg', alt: 'Festivalområdet på Trifolium under aftenhimlen' },
-  { label: 'Hvad er Trifolium?', href: '/trifolium/', image: '/images/cta/trifolium.jpg', alt: 'ART-skilt i Trifoliums industrielle omgivelser' },
+  { label: 'Hvad er Trifolium?', href: '/trifolium/', image: '/images/cta/trifolium.png', alt: 'Trifoliums lysende bogstaver på bygningens tag om aftenen' },
 ];
 export const updates = [
   ['ART: BLAIR SAXON-HILL', '1788769591949-YL1XX58YBZEJEASA9L00', 'Dc-pvM7kcLD'],
